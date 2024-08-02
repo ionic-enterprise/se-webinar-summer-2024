@@ -1,0 +1,27 @@
+ion-card.product-card {
+  box-shadow: none;
+  min-width: 245px;
+}
+
+.product-card ion-card-title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 8px;
+}
+
+.product-card img {
+  border-radius: 16px;
+}
+
+.product-card.ion-activated {
+  transform: none;
+}
+
+.product-card ion-card-subtitle {
+  margin-top: 6px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--ion-color-medium);
+}
