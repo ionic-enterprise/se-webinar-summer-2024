@@ -9,9 +9,9 @@ import SwiftUI
 
 struct EditUserView: View {
     let user: User = ShopAPI.dataStore.user
-    @State var fn: String
-    @State var ln: String
-    @State var email: String
+    @State private var fn: String = ShopAPI.dataStore.user.firstName
+    @State private var ln: String = ShopAPI.dataStore.user.lastName
+    @State private var email: String = ShopAPI.dataStore.user.email
     var body: some View {
         VStack(){
             Image(uiImage: ImageLoader().imageFor(self.user.imageName))
@@ -38,11 +38,7 @@ struct EditUserView: View {
             }
         }
     }
-    init(){
-        _fn = State(initialValue: user.firstName)
-        _ln = State(initialValue: user.lastName)
-        _email = State(initialValue: user.email)
-    }
+
 }
 
 #Preview {

@@ -23,9 +23,11 @@ import "./theme/variables.css";
 import { registerPlugin } from '@capacitor/core'
 
 setupIonicReact();
-
+type NavigationOptions = {
+  id: number
+}
 interface NavigationPlugin {
-  selectProduct(id: number): Promise<void>;
+  selectProduct(options: NavigationOptions): Promise<void>;
 }
 
 const Navigation = registerPlugin<NavigationPlugin>('Navigation', {
@@ -33,7 +35,7 @@ const Navigation = registerPlugin<NavigationPlugin>('Navigation', {
 })
 
 function handleProductClick(id: number) {
-  Navigation.selectProduct(id)
+  Navigation.selectProduct({id})
 }
 
 const App: React.FC = () => (

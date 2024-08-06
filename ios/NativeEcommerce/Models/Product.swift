@@ -21,7 +21,7 @@ enum ProductCategory: String, Codable {
     }
 }
 
-struct Product: Codable, Equatable, Identifiable {
+struct Product: Codable, Identifiable, Hashable {
     enum CodingKeys: String, CodingKey {
         case id, title, description, price, category
         

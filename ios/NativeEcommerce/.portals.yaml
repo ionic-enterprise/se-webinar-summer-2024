@@ -1,0 +1,3 @@
+sync:
+- file-path: ../../web/cs-portals-ecommerce-featured-products/build
+  directory-name: my-app
