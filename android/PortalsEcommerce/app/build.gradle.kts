@@ -50,11 +50,13 @@ android {
 }
 
 dependencies {
-implementation(libs.engage.core)
+    implementation("io.ionic:portals:0.10.2")
+
+    implementation(libs.engage.core)
     implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.appcompat)
     //    implementation(libs.compose.preview.renderer)
     val nav_version = "2.7.7"
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
