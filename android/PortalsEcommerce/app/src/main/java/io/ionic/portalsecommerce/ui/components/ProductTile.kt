@@ -47,8 +47,8 @@ fun ProductTile(
     val format: NumberFormat = NumberFormat.getCurrencyInstance()
     format.setMaximumFractionDigits(0)
     format.setCurrency(Currency.getInstance(Locale.US))
-    Surface (onClick = { onProductClick(product.id) }) {
-        Column {
+    Surface (onClick = { onProductClick(product.id) }, modifier = Modifier.background(Color.White)) {
+        Column (modifier = Modifier.background(Color.White)){
             Image(
                 painter = painterResource(drawableId),
                 contentDescription = product.title,
