@@ -1,5 +1,6 @@
 package io.ionic.portalsecommerce.ui.shop
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -36,7 +37,9 @@ fun ProductList(onProductClick: (Int) -> Unit) {
         verticalArrangement = Arrangement.spacedBy(12.dp),
         horizontalArrangement = Arrangement.spacedBy(12.dp),
         userScrollEnabled = false,
-        modifier = Modifier.height(height.dp)
+        modifier = Modifier
+            .height(height.dp)
+            .background(Color.White)
     ) {
         items(products) { product ->
             ProductTile(product, onProductClick)
