@@ -9,3 +9,6 @@ struct NativeEcommerceApp: App {
         }
     }
 }
+extension GalleryViewModel {
+    static let `default` = GalleryViewModel(dataStore: ShopAPI.dataStore)
+}

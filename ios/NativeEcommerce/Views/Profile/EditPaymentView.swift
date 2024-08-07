@@ -4,11 +4,11 @@ struct EditPaymentView: View {
     @Environment(\.dismiss)  private var dismiss
     var edit: Bool = true
     var index: Int
-    @State var company: String
-    @State var cardNumber: String
-    @State var expiration: String
-    @State var cvv: String
-    @State var zipCode: String
+    @State private var company: String
+    @State private var cardNumber: String
+    @State private var expiration: String
+    @State private var cvv: String
+    @State private var zipCode: String
     let shopApi = ShopAPIPlugin()
     
     var body: some View {

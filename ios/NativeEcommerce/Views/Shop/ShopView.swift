@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ShopView: View {
-    private var viewModel: GalleryViewModel = GalleryViewModel(dataStore: ShopAPI.dataStore)
+    @ObservedObject private var viewModel: GalleryViewModel = .default
     
     var body: some View {
         NavigationStack{
@@ -12,7 +12,7 @@ struct ShopView: View {
                         .font(.title2)
                     LazyVGrid(columns: [GridItem(.adaptive(minimum: 178))]) {
                         ForEach(viewModel.listProducts) { product in
-                            NavigationLink(destination: ItemDetailView(product: product, image: Image(uiImage: ImageLoader().imageFor(product.imageName)))) {
+                            Button(action: {viewModel.selectProduct(by: product.id)}) {
                                 GalleryViewItem(product: product, image: Image(uiImage: ImageLoader().imageFor(product.imageName)), horizontal: false)
                             }
                         }
@@ -20,6 +20,9 @@ struct ShopView: View {
                 }
                 .padding(.leading, 16)
             }.navigationTitle("Shop")
+                .navigationDestination(item: $viewModel.selectedProduct ) { product in
+                    ItemDetailView(product: product, image: Image(uiImage: ImageLoader().imageFor(product.imageName)))
+                }
         }
     }
 }

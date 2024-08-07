@@ -4,11 +4,11 @@ struct EditAddressView: View {
     @Environment(\.dismiss)  private var dismiss
     var edit: Bool = true
     var index: Int
-    @State var fullName: String
-    @State var address: String
-    @State var zipCode: String
-    @State var city: String
-    @State var state: String
+    @State private var fullName: String
+    @State private var address: String
+    @State private var zipCode: String
+    @State private var city: String
+    @State private var state: String
     let shopApi = ShopAPIPlugin()
     
     var body: some View {

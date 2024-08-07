@@ -57,6 +57,7 @@
 		5C6B2E652C590CA800579FE7 /* PaymentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B2E642C590CA800579FE7 /* PaymentCard.swift */; };
 		5C6B2E672C59119800579FE7 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B2E662C59119800579FE7 /* EditUserView.swift */; };
 		5C6B2E692C5950B600579FE7 /* FeaturedProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6B2E682C5950B600579FE7 /* FeaturedProductView.swift */; };
+		5C79373E2C613743002CCC02 /* my-app in Resources */ = {isa = PBXBuildFile; fileRef = 5C79373D2C613743002CCC02 /* my-app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,7 @@
 		5C6B2E642C590CA800579FE7 /* PaymentCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCard.swift; sourceTree = "<group>"; };
 		5C6B2E662C59119800579FE7 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
 		5C6B2E682C5950B600579FE7 /* FeaturedProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedProductView.swift; sourceTree = "<group>"; };
+		5C79373D2C613743002CCC02 /* my-app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "my-app"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		5C0A3C262C00CE2200027C92 /* NativeEcommerce */ = {
 			isa = PBXGroup;
 			children = (
+				5C79373D2C613743002CCC02 /* my-app */,
 				5C6B2E282C588B5900579FE7 /* Extensions */,
 				5C0A3C272C00CE2200027C92 /* NativeEcommerceApp.swift */,
 				5C6B2E212C58711900579FE7 /* View Models */,
@@ -293,6 +296,8 @@
 			dependencies = (
 			);
 			name = NativeEcommerce;
+			packageProductDependencies = (
+			);
 			productName = NativeEcommerce;
 			productReference = 5C0A3C242C00CE2200027C92 /* NativeEcommerce.app */;
 			productType = "com.apple.product-type.application";
@@ -321,6 +326,8 @@
 				Base,
 			);
 			mainGroup = 5C0A3C1B2C00CE2200027C92;
+			packageReferences = (
+			);
 			productRefGroup = 5C0A3C252C00CE2200027C92 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -354,6 +361,7 @@
 				5C6B2E4D2C58D0BA00579FE7 /* ionic-shirt.png in Resources */,
 				5C6B2E4B2C58D0BA00579FE7 /* ionitron-shirt.png in Resources */,
 				5C6B2E4A2C58D0BA00579FE7 /* portals-tote.png in Resources */,
+				5C79373E2C613743002CCC02 /* my-app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
